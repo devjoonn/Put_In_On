@@ -26,6 +26,7 @@
 		47D8640129DAD14900B3DD28 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 47D8640029DAD14900B3DD28 /* FirebaseRemoteConfig */; };
 		47D8640329DAD14900B3DD28 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 47D8640229DAD14900B3DD28 /* FirebaseStorage */; };
 		47D8640829DAD5C100B3DD28 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 47D8640729DAD5C000B3DD28 /* GoogleService-Info.plist */; };
+		47D8640A29DD2BEF00B3DD28 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D8640929DD2BEF00B3DD28 /* HomeTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		47194E7529D6D24D00671360 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		47194E7929D6D92100671360 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		47D8640729DAD5C000B3DD28 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		47D8640929DD2BEF00B3DD28 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				47194E6E29D6C98800671360 /* HomeViewController.swift */,
+				47D8640929DD2BEF00B3DD28 /* HomeTableViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 				47194E4E29D6C1C700671360 /* SceneDelegate.swift in Sources */,
 				47194E6629D6C77D00671360 /* UIColor.swift in Sources */,
 				47194E6F29D6C98800671360 /* HomeViewController.swift in Sources */,
+				47D8640A29DD2BEF00B3DD28 /* HomeTableViewCell.swift in Sources */,
 				47194E6829D6C7A600671360 /* Constant.swift in Sources */,
 				47194E7A29D6D92100671360 /* WebViewController.swift in Sources */,
 			);
