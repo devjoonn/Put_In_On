@@ -32,7 +32,7 @@ class HomeTableViewCell: UITableViewCell {
     
     var workerLabel: UILabel = {
         $0.text = "근무자"
-//        $0.font = UIFont.notoSans(font: .notoSansKrMedium, size: 18)
+        $0.font = UIFont.notoSansBold(size: 16)
         $0.textColor = UIColor.black
         $0.numberOfLines = 0
         return $0
@@ -40,14 +40,14 @@ class HomeTableViewCell: UITableViewCell {
     
     var failText: UILabel = {
         $0.text = "불통과"
-//        $0.font = UIFont.notoSansBold(size: 18)
+        $0.font = UIFont.notoSansBold(size: 18)
         $0.textColor = UIColor.rgb(red: 255, green: 35, blue: 1)
         return $0
     }(UILabel())
     
     var dateLabel: UILabel = {
         $0.text = "23.03.25"
-//        $0.font = UIFont.notoSansRegular(size: 13)
+        $0.font = UIFont.notoSansRegular(size: 13)
         $0.textColor = UIColor.black
         return $0
     }(UILabel())
@@ -80,7 +80,7 @@ class HomeTableViewCell: UITableViewCell {
         }
         workerLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().inset(21)
-            make.leading.equalToSuperview().inset(40)
+            make.centerX.equalTo(mainImageView.snp.centerX)
         }
         
         mainImageView.snp.makeConstraints { make in

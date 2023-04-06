@@ -33,7 +33,6 @@ class HomeViewController: UIViewController {
             make.edges.equalToSuperview()
         }
     }
-    
 
 }
 
