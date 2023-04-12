@@ -12,7 +12,7 @@ class VideoViewController: UIViewController {
 
     private let alertLabel: UILabel = {
         $0.text = "URL을 입력해주세요."
-        $0.font = UIFont.notoSansRegular(size: 13)
+        $0.font = UIFont.cafe24Ssurround(size: 18)
         $0.textColor = UIColor.mainColor
         $0.textAlignment = .center
         return $0
@@ -30,7 +30,7 @@ class VideoViewController: UIViewController {
         $0.attributedPlaceholder = NSAttributedString(
             string: "입력하세요.",
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
-        $0.font = .notoSansRegular(size: 14)
+        $0.font = .pretendardRegular(size: 14)
         $0.backgroundColor = .clear
         $0.textColor = UIColor.black
         return $0
@@ -38,7 +38,7 @@ class VideoViewController: UIViewController {
     
     let moveButton: UIButton = {
         $0.layer.cornerRadius = 10
-        $0.setAttributedTitle(NSAttributedString(string: "확인", attributes: [NSAttributedString.Key.font: UIFont.notoSans(font: .notoSansKrBold, size: 16), NSAttributedString.Key.foregroundColor: UIColor.white]), for: .normal)
+        $0.setAttributedTitle(NSAttributedString(string: "확인", attributes: [NSAttributedString.Key.font: UIFont.pretendardBold(size: 16), NSAttributedString.Key.foregroundColor: UIColor.white]), for: .normal)
         $0.tintColor = UIColor.white
         $0.backgroundColor = UIColor.mainColor
         $0.setTitle("확인", for: .normal)

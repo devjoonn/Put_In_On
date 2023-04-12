@@ -19,6 +19,7 @@
 		47194E6F29D6C98800671360 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47194E6E29D6C98800671360 /* HomeViewController.swift */; };
 		47194E7629D6D24D00671360 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47194E7529D6D24D00671360 /* WebKit.framework */; };
 		47194E7A29D6D92100671360 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47194E7929D6D92100671360 /* WebViewController.swift */; };
+		47603A2429E6F91600C49628 /* Cafe24Ssurround.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 47603A2329E6F91600C49628 /* Cafe24Ssurround.ttf */; };
 		47D863F929DAD14900B3DD28 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 47D863F829DAD14900B3DD28 /* FirebaseAnalytics */; };
 		47D863FB29DAD14900B3DD28 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 47D863FA29DAD14900B3DD28 /* FirebaseAuth */; };
 		47D863FD29DAD14900B3DD28 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 47D863FC29DAD14900B3DD28 /* FirebaseDatabase */; };
@@ -34,6 +35,7 @@
 		47D8641829DE490100B3DD28 /* NotoSansKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 47D8641229DE490000B3DD28 /* NotoSansKR-Medium.otf */; };
 		47D8641929DE490100B3DD28 /* NotoSansKR-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 47D8641329DE490000B3DD28 /* NotoSansKR-Black.otf */; };
 		47D8641B29DE493D00B3DD28 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D8641A29DE493D00B3DD28 /* UIFont.swift */; };
+		47D8642129E100CA00B3DD28 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 47D8642029E100CA00B3DD28 /* FSCalendar */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,7 @@
 		47194E6E29D6C98800671360 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		47194E7529D6D24D00671360 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		47194E7929D6D92100671360 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		47603A2329E6F91600C49628 /* Cafe24Ssurround.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cafe24Ssurround.ttf; sourceTree = "<group>"; };
 		47D8640729DAD5C000B3DD28 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		47D8640929DD2BEF00B3DD28 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		47D8640E29DE490000B3DD28 /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Bold.otf"; sourceTree = "<group>"; };
@@ -70,6 +73,7 @@
 				47194E7629D6D24D00671360 /* WebKit.framework in Frameworks */,
 				47194E6B29D6C82600671360 /* SnapKit in Frameworks */,
 				47D8640129DAD14900B3DD28 /* FirebaseRemoteConfig in Frameworks */,
+				47D8642129E100CA00B3DD28 /* FSCalendar in Frameworks */,
 				47D863F929DAD14900B3DD28 /* FirebaseAnalytics in Frameworks */,
 				47D8640329DAD14900B3DD28 /* FirebaseStorage in Frameworks */,
 				47D863FB29DAD14900B3DD28 /* FirebaseAuth in Frameworks */,
@@ -178,6 +182,7 @@
 		47D8640D29DE48E900B3DD28 /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				47603A2329E6F91600C49628 /* Cafe24Ssurround.ttf */,
 				47D8641329DE490000B3DD28 /* NotoSansKR-Black.otf */,
 				47D8640E29DE490000B3DD28 /* NotoSansKR-Bold.otf */,
 				47D8641129DE490000B3DD28 /* NotoSansKR-Light.otf */,
@@ -212,6 +217,7 @@
 				47D863FE29DAD14900B3DD28 /* FirebaseFirestore */,
 				47D8640029DAD14900B3DD28 /* FirebaseRemoteConfig */,
 				47D8640229DAD14900B3DD28 /* FirebaseStorage */,
+				47D8642029E100CA00B3DD28 /* FSCalendar */,
 			);
 			productName = PutItOn;
 			productReference = 47194E4829D6C1C700671360 /* PutItOn.app */;
@@ -244,6 +250,7 @@
 			packageReferences = (
 				47194E6929D6C82600671360 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				47D863F729DAD14900B3DD28 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				47D8641F29E100C900B3DD28 /* XCRemoteSwiftPackageReference "FSCalendar" */,
 			);
 			productRefGroup = 47194E4929D6C1C700671360 /* Products */;
 			projectDirPath = "";
@@ -262,6 +269,7 @@
 				47D8641929DE490100B3DD28 /* NotoSansKR-Black.otf in Resources */,
 				47D8641629DE490100B3DD28 /* NotoSansKR-Thin.otf in Resources */,
 				47194E5829D6C1C900671360 /* LaunchScreen.storyboard in Resources */,
+				47603A2429E6F91600C49628 /* Cafe24Ssurround.ttf in Resources */,
 				47D8641729DE490100B3DD28 /* NotoSansKR-Light.otf in Resources */,
 				47194E5529D6C1C900671360 /* Assets.xcassets in Resources */,
 				47D8641829DE490100B3DD28 /* NotoSansKR-Medium.otf in Resources */,
@@ -513,6 +521,14 @@
 				minimumVersion = 9.0.0;
 			};
 		};
+		47D8641F29E100C900B3DD28 /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -550,6 +566,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 47D863F729DAD14900B3DD28 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		47D8642029E100CA00B3DD28 /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 47D8641F29E100C900B3DD28 /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

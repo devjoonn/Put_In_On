@@ -7,36 +7,52 @@
 
 import UIKit
 
-enum NotoSansKRFont: CaseIterable {
-    case notoSansKrBlack
-    case notoSansKrBold
-    case notoSansKrLight
-    case notoSansKrMedium
-    case notoSansKrRegular
-    case notoSansKrThin
+enum PretendardFont: CaseIterable {
+    case pretendardBlack
+    case pretendardBold
+    case pretendardLight
+    case pretendardMedium
+    case pretendardRegular
+    case pretendardThin
+    
     
     var fontName: String {
         switch self {
-        case .notoSansKrBlack: return "NotoSansKR-Black"
-        case .notoSansKrBold: return "NotoSansKR-Bold"
-        case .notoSansKrLight: return "NotoSansKR-Light"
-        case .notoSansKrMedium: return "NotoSansKR-Medium"
-        case .notoSansKrRegular: return "NotoSansKR-Medium"
-        case .notoSansKrThin: return "NotoSansKR-Thin"
+        case .pretendardBlack: return "Pretendard-Black"
+        case .pretendardBold: return "Pretendard-Bold"
+        case .pretendardLight: return "Pretendard-Light"
+        case .pretendardMedium: return "Pretendard-Medium"
+        case .pretendardRegular: return "Pretendard-Medium"
+        case .pretendardThin: return "Pretendard-Thin"
+        }
+    }
+}
+
+enum Cafe24SsurroundFont: CaseIterable {
+    case cafe24Ssurround
+    
+    var fontName: String {
+        switch self {
+        case .cafe24Ssurround: return "Cafe24Ssurround"
         }
     }
 }
 
 extension UIFont {
-    static func notoSans(font: NotoSansKRFont, size: CGFloat) -> UIFont {
+    static func cafe24Ssurround(size: CGFloat) -> UIFont {
+        return UIFont(name: Cafe24SsurroundFont.cafe24Ssurround.fontName, size: size) ?? UIFont.systemFont(ofSize: size)
+    }
+    
+    static func pretendard(font: PretendardFont, size: CGFloat) -> UIFont {
         return UIFont(name: font.fontName, size: size) ?? UIFont.systemFont(ofSize: size)
     }
     
-    static func notoSansRegular(size: CGFloat) -> UIFont {
-        return UIFont(name: NotoSansKRFont.notoSansKrRegular.fontName, size: size) ?? UIFont.systemFont(ofSize: size)
+    static func pretendardRegular(size: CGFloat) -> UIFont {
+        return UIFont(name: PretendardFont.pretendardRegular.fontName, size: size) ?? UIFont.systemFont(ofSize: size)
     }
     
-    static func notoSansBold(size: CGFloat) -> UIFont {
-        return UIFont(name: NotoSansKRFont.notoSansKrBold.fontName, size: size) ?? UIFont.boldSystemFont(ofSize: size)
+    static func pretendardBold(size: CGFloat) -> UIFont {
+        return UIFont(name: PretendardFont.pretendardBold.fontName, size: size) ?? UIFont.boldSystemFont(ofSize: size)
     }
 }
+
