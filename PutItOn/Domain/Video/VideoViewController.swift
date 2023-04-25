@@ -10,6 +10,18 @@ import SnapKit
 
 class VideoViewController: UIViewController {
 
+    var textfieldString = "" {
+        didSet {
+            if !textfieldString.isEmpty {
+                moveButton.isEnabled = true
+                moveButton.backgroundColor = UIColor.moveColor
+            } else {
+                moveButton.isEnabled = false
+                moveButton.backgroundColor = .lightGray
+            }
+        }
+    }
+    
     private let alertLabel: UILabel = {
         $0.text = "URL을 입력해주세요."
         $0.font = UIFont.cafe24Ssurround(size: 18)
@@ -32,6 +44,12 @@ class VideoViewController: UIViewController {
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
         $0.font = .pretendardRegular(size: 14)
         $0.backgroundColor = .clear
+        $0.clearButtonMode = .whileEditing
+        $0.autocapitalizationType = .none
+        $0.spellCheckingType = .no
+        $0.smartDashesType = .no
+        $0.autocorrectionType = .no
+        $0.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         $0.textColor = UIColor.black
         return $0
     }(UITextField())
@@ -40,8 +58,16 @@ class VideoViewController: UIViewController {
         $0.layer.cornerRadius = 10
         $0.setAttributedTitle(NSAttributedString(string: "확인", attributes: [NSAttributedString.Key.font: UIFont.pretendardBold(size: 16), NSAttributedString.Key.foregroundColor: UIColor.white]), for: .normal)
         $0.tintColor = UIColor.white
-        $0.backgroundColor = UIColor.mainColor
-        $0.setTitle("확인", for: .normal)
+        $0.backgroundColor = UIColor.lightGray
+        $0.isEnabled = false
+        return $0
+    }(UIButton())
+    
+    let fastMoveButton: UIButton = {
+        $0.layer.cornerRadius = 10
+        $0.setAttributedTitle(NSAttributedString(string: "바로보기", attributes: [NSAttributedString.Key.font: UIFont.pretendardBold(size: 16), NSAttributedString.Key.foregroundColor: UIColor.white]), for: .normal)
+        $0.tintColor = UIColor.white
+        $0.backgroundColor = UIColor.fastMoveColor
         return $0
     }(UIButton())
     
@@ -51,8 +77,10 @@ class VideoViewController: UIViewController {
         setConstraints()
         hideKeyboardWhenTappedAround()
         configureNavbar()
+        textfield.delegate = self
        
         moveButton.addTarget(self, action: #selector(moveButtonTap), for: .touchUpInside)
+        fastMoveButton.addTarget(self, action: #selector(fastMoveButtonTap), for: .touchUpInside)
     }
     
 //MARK: - set UI
@@ -61,6 +89,7 @@ class VideoViewController: UIViewController {
         view.addSubview(textfieldView)
         textfieldView.addSubview(textfield)
         view.addSubview(moveButton)
+        view.addSubview(fastMoveButton)
     }
 
     func setConstraints() {
@@ -79,14 +108,21 @@ class VideoViewController: UIViewController {
         textfield.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
             make.leading.equalToSuperview().inset(20)
-            make.trailing.equalToSuperview().inset(20)
+            make.trailing.equalToSuperview().inset(10)
         }
         
         moveButton.snp.makeConstraints { make in
             make.top.equalTo(textfieldView.snp.bottom).inset(-40)
             make.centerX.equalToSuperview()
             make.width.equalTo(UIScreen.main.bounds.width - 70)
-            make.height.equalTo(50)
+            make.height.equalTo(55)
+        }
+        
+        fastMoveButton.snp.makeConstraints { make in
+            make.top.equalTo(moveButton.snp.bottom).inset(-25)
+            make.centerX.equalToSuperview()
+            make.width.equalTo(UIScreen.main.bounds.width - 70)
+            make.height.equalTo(55)
         }
     }
     
@@ -118,12 +154,32 @@ class VideoViewController: UIViewController {
         view.endEditing(true)
     }
     
+    
     @objc func moveButtonTap() {
         let vc = WebViewController()
-        vc.text = textfield.text ?? ""
-        vc.url = "https://m.search.naver.com/search.naver?sm=mtp_hty.top&where=m&"
+        vc.text = ""
+        vc.url = textfield.text ?? ""
         self.tabBarController?.tabBar.isHidden = true
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    @objc func fastMoveButtonTap() {
+        let vc = WebViewController()
+        vc.text = ""
+        vc.url = Secret.mainURL
+        self.tabBarController?.tabBar.isHidden = true
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        textfieldString = textField.text ?? ""
+        print(textfieldString)
+    }
+}
+
+extension VideoViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textfield.resignFirstResponder()
+        return true
+    }
 }

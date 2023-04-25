@@ -46,8 +46,9 @@ class WebViewController: UIViewController {
     }
     
     func loadWebView() {
+//        var components = URLComponents(string: url)!
+//        components.queryItems = [ URLQueryItem(name: "query", value: text) ]
         var components = URLComponents(string: url)!
-        components.queryItems = [ URLQueryItem(name: "query", value: text) ]
         let request = URLRequest(url: components.url!)
         
         webView.load(request)

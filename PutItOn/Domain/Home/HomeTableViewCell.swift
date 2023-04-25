@@ -13,34 +13,26 @@ class HomeTableViewCell: UITableViewCell {
     static let identifier = "HomeTableViewCell"
     
     
-    private let view: UIView = {
-        $0.backgroundColor = .clear
-        $0.layer.cornerRadius = 10
-        $0.layer.borderWidth = 1
-        $0.layer.borderColor = UIColor.mainColor.cgColor
-        $0.clipsToBounds = false
-        return $0
-    }(UIView())
+//    private let upLineView: UIView = {
+//        $0.backgroundColor = .clear
+//        $0.layer.cornerRadius = 10
+//        $0.layer.borderWidth = 1.3
+//        $0.layer.borderColor = UIColor.gray.cgColor
+//        $0.clipsToBounds = false
+//        return $0
+//    }(UIView())
     
     var mainImageView: UIImageView = {
         $0.contentMode = .scaleAspectFill
         $0.clipsToBounds = true
-        $0.layer.cornerRadius = 25
+        $0.layer.cornerRadius = 18
         $0.image = UIImage(systemName: "person.fill")
         return $0
     }(UIImageView())
     
-    var workerLabel: UILabel = {
-        $0.text = "근무자"
-        $0.font = UIFont.pretendardBold(size: 18)
-        $0.textColor = UIColor.black
-        $0.numberOfLines = 0
-        return $0
-    }(UILabel())
-    
     var failText: UILabel = {
         $0.text = "불통과"
-        $0.font = UIFont.cafe24Ssurround(size: 18)
+        $0.font = UIFont.pretendardBold(size: 21)
         $0.textColor = UIColor.rgb(red: 255, green: 35, blue: 1)
         return $0
     }(UILabel())
@@ -51,6 +43,15 @@ class HomeTableViewCell: UITableViewCell {
         $0.textColor = UIColor.black
         return $0
     }(UILabel())
+    
+    private let downLineView: UIView = {
+        $0.backgroundColor = .clear
+        $0.layer.cornerRadius = 10
+        $0.layer.borderWidth = 4
+        $0.layer.borderColor = UIColor.gray.cgColor
+        $0.clipsToBounds = false
+        return $0
+    }(UIView())
     
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -69,34 +70,38 @@ class HomeTableViewCell: UITableViewCell {
     
     
     func setUIandConstraints() {
-        contentView.addSubview(view)
-        view.addSubview(mainImageView)
-        view.addSubview(workerLabel)
-        view.addSubview(failText)
-        view.addSubview(dateLabel)
+//        contentView.addSubview(upLineView)
+        contentView.addSubview(mainImageView)
+        contentView.addSubview(failText)
+        contentView.addSubview(dateLabel)
+        contentView.addSubview(downLineView)
         
-        view.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
-        workerLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview().inset(21)
-            make.centerX.equalTo(mainImageView.snp.centerX)
-        }
+//        upLineView.snp.makeConstraints { make in
+//            make.top.equalToSuperview()
+//            make.leading.trailing.equalToSuperview().inset(15)
+//            make.height.equalTo(1)
+//        }
         
         mainImageView.snp.makeConstraints { make in
-            make.top.equalTo(workerLabel.snp.bottom).inset(-20)
-            make.leading.equalToSuperview().inset(21)
-            make.width.equalTo(UIScreen.main.bounds.width / 3)
-            make.height.equalTo(130)
+            make.centerY.equalToSuperview()
+            make.leading.equalToSuperview().inset(14)
+            make.width.equalTo(UIScreen.main.bounds.width / 3 + 20)
+            make.height.equalTo(150)
         }
         
         failText.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
-            make.trailing.equalToSuperview().inset(20)
+            make.trailing.equalToSuperview().inset(25)
             
         }
         dateLabel.snp.makeConstraints { make in
-            make.trailing.bottom.equalToSuperview().inset(15)
+            make.trailing.bottom.equalToSuperview().inset(18)
+        }
+        
+        downLineView.snp.makeConstraints { make in
+            make.bottom.equalToSuperview().inset(-8)
+            make.leading.trailing.equalToSuperview().inset(11)
+            make.height.equalTo(1)
         }
     }
 }

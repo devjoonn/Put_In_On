@@ -12,6 +12,8 @@ extension UIColor {
     static let mainColor = UIColor.rgb(red: 38, green: 107, blue: 241)
     static let textfieldBackgroundColor = UIColor.rgb(red: 222, green: 222, blue: 222)
     static let unselectedTabbarColor = UIColor.rgb(red: 168, green: 168, blue: 168)
+    static let fastMoveColor = UIColor.rgb(red: 60, green: 78, blue: 254)
+    static let moveColor = UIColor.rgb(red: 102, green: 116, blue: 254)
 }
 
 // RGB값을 받아서 UIColor를 리턴하는 함수
