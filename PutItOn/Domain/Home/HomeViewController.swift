@@ -12,8 +12,18 @@ import SDWebImage
 
 class HomeViewController: UIViewController {
     
-    var timeModel: [String] = []
-    var imageModel: [String] = []
+    var timeModel: [String] = [] {
+        didSet {
+            self.tableView.reloadData()
+        }
+    }
+    var imageModel: [String] = [] {
+        didSet {
+            self.tableView.reloadData()
+        }
+    }
+    
+    private let refreshControl = UIRefreshControl()
     
     let tableView: UITableView = {
         $0.register(HomeTableViewCell.self, forCellReuseIdentifier: HomeTableViewCell.identifier)
@@ -24,11 +34,14 @@ class HomeViewController: UIViewController {
     //MARK: - Life Cycles
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "불통과"
         
         tableView.delegate = self
         tableView.dataSource = self
         setUIConstraints()
         configureNavbar()
+        refreshControl.addTarget(self, action: #selector(beginRefresh), for: .valueChanged)
+        tableView.refreshControl = refreshControl
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,9 +50,26 @@ class HomeViewController: UIViewController {
             self.imageModel = iModel
             self.tableView.reloadData()
             
+            
             print("timeModel 들어있는 건 =. \(self.timeModel)")
             print("imageModel 들어있는 건 =. \(self.imageModel)")
+            print("timeModel count = \(self.timeModel.count)")
+            print("imageModel count = \(self.imageModel.count)")
             
+        }
+    }
+    
+    @objc func beginRefresh(_ sender: UIRefreshControl) {
+        print("beginRefresh!")
+        sender.endRefreshing()
+        timeModel.removeAll()
+        imageModel.removeAll()
+        
+        FireBaseDataManager.getData() { tModel, iModel in
+            self.timeModel = tModel
+            self.imageModel = iModel
+            self.tableView.reloadData()
+        
         }
     }
     
@@ -99,5 +129,18 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         navigationController?.tabBarController?.tabBar.isHidden = true
         navigationController?.pushViewController(vc, animated: true)
     }
+    
+//    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+//        // 오른쪽 스와이프
+//        let delete = UIContextualAction(style: .normal, title: "delete") { (UIContextualAction, UIView, success: @escaping (Bool) -> Void) in
+//            print("삭제 클릭 됨")
+//
+//            success(true)
+//        }
+//        delete.backgroundColor = UIColor.rgb(red: 255, green: 35, blue: 1)
+//
+//        //actions배열 인덱스 0이 왼쪽에 붙어서 나옴
+//        return UISwipeActionsConfiguration(actions:[ delete ])
+//    }
     
 }

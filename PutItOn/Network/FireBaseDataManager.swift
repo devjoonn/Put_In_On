@@ -28,8 +28,8 @@ class FireBaseDataManager {
             for (_, value) in sv {
                     // 각각의 문자열 값을 출력합니다.
                     if let timeString = value as? String {
-                        print("time = \(timeString)")
                         timeModel.append("\(timeString)")
+                        timeModel.sort(by: >)
                         
                         if timeModel.isEmpty == false && imageModel.isEmpty == false {
                             completion(timeModel, imageModel)
@@ -63,6 +63,7 @@ class FireBaseDataManager {
                     if let imageUrl = url {
                         print("imageURL = \(imageUrl)")
                         imageModel.append("\(imageUrl)")
+                        imageModel.sort(by: >)
                         
                         if timeModel.isEmpty == false && imageModel.isEmpty == false {
                             completion(timeModel, imageModel)

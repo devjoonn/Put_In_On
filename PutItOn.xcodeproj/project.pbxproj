@@ -22,6 +22,16 @@
 		4727D8B429F67EB500239DC2 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 4727D8B329F67EB500239DC2 /* SDWebImage */; };
 		4727D8B729F6825700239DC2 /* FireBaseDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4727D8B629F6825700239DC2 /* FireBaseDataManager.swift */; };
 		4727D8B929F6B60100239DC2 /* HomeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4727D8B829F6B60100239DC2 /* HomeDetailViewController.swift */; };
+		4733113329FED18C00510643 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4733112829FED18800510643 /* Pretendard-Medium.otf */; };
+		4733113529FED18C00510643 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4733112A29FED18900510643 /* Pretendard-Regular.otf */; };
+		4733113629FED18C00510643 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4733112B29FED18900510643 /* Pretendard-SemiBold.otf */; };
+		4733113729FED18C00510643 /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4733112C29FED18900510643 /* Pretendard-Thin.otf */; };
+		4733113829FED18C00510643 /* PretendardVariable.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4733112D29FED18A00510643 /* PretendardVariable.ttf */; };
+		4733113929FED18C00510643 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4733112E29FED18B00510643 /* Pretendard-Bold.otf */; };
+		4733113A29FED18C00510643 /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4733112F29FED18B00510643 /* Pretendard-Black.otf */; };
+		4733113B29FED18C00510643 /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4733113029FED18B00510643 /* Pretendard-ExtraBold.otf */; };
+		4733113C29FED18C00510643 /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4733113129FED18C00510643 /* Pretendard-ExtraLight.otf */; };
+		4733113D29FED18C00510643 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4733113229FED18C00510643 /* Pretendard-Light.otf */; };
 		47603A2429E6F91600C49628 /* Cafe24Ssurround.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 47603A2329E6F91600C49628 /* Cafe24Ssurround.ttf */; };
 		47D863F929DAD14900B3DD28 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 47D863F829DAD14900B3DD28 /* FirebaseAnalytics */; };
 		47D863FB29DAD14900B3DD28 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 47D863FA29DAD14900B3DD28 /* FirebaseAuth */; };
@@ -31,12 +41,6 @@
 		47D8640329DAD14900B3DD28 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 47D8640229DAD14900B3DD28 /* FirebaseStorage */; };
 		47D8640829DAD5C100B3DD28 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 47D8640729DAD5C000B3DD28 /* GoogleService-Info.plist */; };
 		47D8640A29DD2BEF00B3DD28 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D8640929DD2BEF00B3DD28 /* HomeTableViewCell.swift */; };
-		47D8641429DE490100B3DD28 /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 47D8640E29DE490000B3DD28 /* NotoSansKR-Bold.otf */; };
-		47D8641529DE490100B3DD28 /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 47D8640F29DE490000B3DD28 /* NotoSansKR-Regular.otf */; };
-		47D8641629DE490100B3DD28 /* NotoSansKR-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 47D8641029DE490000B3DD28 /* NotoSansKR-Thin.otf */; };
-		47D8641729DE490100B3DD28 /* NotoSansKR-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 47D8641129DE490000B3DD28 /* NotoSansKR-Light.otf */; };
-		47D8641829DE490100B3DD28 /* NotoSansKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 47D8641229DE490000B3DD28 /* NotoSansKR-Medium.otf */; };
-		47D8641929DE490100B3DD28 /* NotoSansKR-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 47D8641329DE490000B3DD28 /* NotoSansKR-Black.otf */; };
 		47D8641B29DE493D00B3DD28 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D8641A29DE493D00B3DD28 /* UIFont.swift */; };
 		47D8642129E100CA00B3DD28 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 47D8642029E100CA00B3DD28 /* FSCalendar */; };
 /* End PBXBuildFile section */
@@ -57,15 +61,19 @@
 		4727D8AD29F6521800239DC2 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		4727D8B629F6825700239DC2 /* FireBaseDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseDataManager.swift; sourceTree = "<group>"; };
 		4727D8B829F6B60100239DC2 /* HomeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailViewController.swift; sourceTree = "<group>"; };
+		4733112829FED18800510643 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
+		4733112A29FED18900510643 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
+		4733112B29FED18900510643 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
+		4733112C29FED18900510643 /* Pretendard-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Thin.otf"; sourceTree = "<group>"; };
+		4733112D29FED18A00510643 /* PretendardVariable.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PretendardVariable.ttf; sourceTree = "<group>"; };
+		4733112E29FED18B00510643 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
+		4733112F29FED18B00510643 /* Pretendard-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Black.otf"; sourceTree = "<group>"; };
+		4733113029FED18B00510643 /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
+		4733113129FED18C00510643 /* Pretendard-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraLight.otf"; sourceTree = "<group>"; };
+		4733113229FED18C00510643 /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Light.otf"; sourceTree = "<group>"; };
 		47603A2329E6F91600C49628 /* Cafe24Ssurround.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cafe24Ssurround.ttf; sourceTree = "<group>"; };
 		47D8640729DAD5C000B3DD28 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		47D8640929DD2BEF00B3DD28 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
-		47D8640E29DE490000B3DD28 /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Bold.otf"; sourceTree = "<group>"; };
-		47D8640F29DE490000B3DD28 /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
-		47D8641029DE490000B3DD28 /* NotoSansKR-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Thin.otf"; sourceTree = "<group>"; };
-		47D8641129DE490000B3DD28 /* NotoSansKR-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Light.otf"; sourceTree = "<group>"; };
-		47D8641229DE490000B3DD28 /* NotoSansKR-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Medium.otf"; sourceTree = "<group>"; };
-		47D8641329DE490000B3DD28 /* NotoSansKR-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Black.otf"; sourceTree = "<group>"; };
 		47D8641A29DE493D00B3DD28 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -206,13 +214,17 @@
 		47D8640D29DE48E900B3DD28 /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				4733112F29FED18B00510643 /* Pretendard-Black.otf */,
+				4733112E29FED18B00510643 /* Pretendard-Bold.otf */,
+				4733113029FED18B00510643 /* Pretendard-ExtraBold.otf */,
+				4733113129FED18C00510643 /* Pretendard-ExtraLight.otf */,
+				4733113229FED18C00510643 /* Pretendard-Light.otf */,
+				4733112829FED18800510643 /* Pretendard-Medium.otf */,
+				4733112A29FED18900510643 /* Pretendard-Regular.otf */,
+				4733112B29FED18900510643 /* Pretendard-SemiBold.otf */,
+				4733112C29FED18900510643 /* Pretendard-Thin.otf */,
+				4733112D29FED18A00510643 /* PretendardVariable.ttf */,
 				47603A2329E6F91600C49628 /* Cafe24Ssurround.ttf */,
-				47D8641329DE490000B3DD28 /* NotoSansKR-Black.otf */,
-				47D8640E29DE490000B3DD28 /* NotoSansKR-Bold.otf */,
-				47D8641129DE490000B3DD28 /* NotoSansKR-Light.otf */,
-				47D8641229DE490000B3DD28 /* NotoSansKR-Medium.otf */,
-				47D8640F29DE490000B3DD28 /* NotoSansKR-Regular.otf */,
-				47D8641029DE490000B3DD28 /* NotoSansKR-Thin.otf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -292,16 +304,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47D8641929DE490100B3DD28 /* NotoSansKR-Black.otf in Resources */,
-				47D8641629DE490100B3DD28 /* NotoSansKR-Thin.otf in Resources */,
+				4733113C29FED18C00510643 /* Pretendard-ExtraLight.otf in Resources */,
+				4733113929FED18C00510643 /* Pretendard-Bold.otf in Resources */,
 				47194E5829D6C1C900671360 /* LaunchScreen.storyboard in Resources */,
+				4733113329FED18C00510643 /* Pretendard-Medium.otf in Resources */,
+				4733113729FED18C00510643 /* Pretendard-Thin.otf in Resources */,
+				4733113629FED18C00510643 /* Pretendard-SemiBold.otf in Resources */,
+				4733113829FED18C00510643 /* PretendardVariable.ttf in Resources */,
+				4733113D29FED18C00510643 /* Pretendard-Light.otf in Resources */,
 				47603A2429E6F91600C49628 /* Cafe24Ssurround.ttf in Resources */,
-				47D8641729DE490100B3DD28 /* NotoSansKR-Light.otf in Resources */,
+				4733113529FED18C00510643 /* Pretendard-Regular.otf in Resources */,
+				4733113B29FED18C00510643 /* Pretendard-ExtraBold.otf in Resources */,
 				47194E5529D6C1C900671360 /* Assets.xcassets in Resources */,
-				47D8641829DE490100B3DD28 /* NotoSansKR-Medium.otf in Resources */,
-				47D8641429DE490100B3DD28 /* NotoSansKR-Bold.otf in Resources */,
+				4733113A29FED18C00510643 /* Pretendard-Black.otf in Resources */,
 				47D8640829DAD5C100B3DD28 /* GoogleService-Info.plist in Resources */,
-				47D8641529DE490100B3DD28 /* NotoSansKR-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

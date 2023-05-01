@@ -19,13 +19,13 @@ class BaseTabBarController: UITabBarController {
             let vc2 = UINavigationController(rootViewController: HomeViewController())
             
             vc1.tabBarItem.image = UIImage(systemName: "play.rectangle")
-            vc2.tabBarItem.image = UIImage(systemName: "house")
+            vc2.tabBarItem.image = UIImage(systemName: "xmark")
             
             vc1.tabBarItem.selectedImage = UIImage(systemName: "play.rectangle_fill")
-            vc2.tabBarItem.selectedImage = UIImage(systemName: "house_fill")
+            vc2.tabBarItem.selectedImage = UIImage(systemName: "xmark")
             
             vc1.title = "실시간"
-            vc2.title = "홈"
+            vc2.title = "불통과"
             
             tabBar.tintColor = UIColor.mainColor
             tabBar.unselectedItemTintColor = .unselectedTabbarColor

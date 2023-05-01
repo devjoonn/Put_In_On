@@ -8,6 +8,13 @@
 import UIKit
 
 struct DataModel {
+    var dataId: String
     var imageUrl: String
     var timeString: String
+    
+    init(dataId: String, imageUrl: String, timeString: String) {
+        self.dataId = dataId
+        self.imageUrl = imageUrl
+        self.timeString = timeString
+    }
 }
