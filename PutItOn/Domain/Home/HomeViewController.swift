@@ -34,7 +34,7 @@ class HomeViewController: UIViewController {
     //MARK: - Life Cycles
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "불통과"
+        title = "통과"
         
         tableView.delegate = self
         tableView.dataSource = self

@@ -36,9 +36,6 @@ class FireBaseDataManager {
                         }
                     }
                 }
- 
-//            sleep(5)
-//            completion(timeModel, imageModel)
         })
         
         // Firebase Storage에서 이미지 가져오기
